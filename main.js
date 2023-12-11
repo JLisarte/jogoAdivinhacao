@@ -17,13 +17,14 @@ function handleTryClick(event) {
   event.preventDefault() // Evita o comportamento padrão do botão
 
   const inputNumber = document.querySelector("#inputNumber")
+  const number = Number(inputNumber.value)
 
-  if (Number(inputNumber.value) > 10 && Number(inputNumber.value) < 0) {
+  if (number > 10 || number < 0) {
     alert("Digite um número entre 0 e 10")
     return
   }
 
-  if (Number(inputNumber.value) == randomNumber) {
+  if (number === randomNumber) {
     toggleScreen()
     screen2.querySelector(
       "h2"
